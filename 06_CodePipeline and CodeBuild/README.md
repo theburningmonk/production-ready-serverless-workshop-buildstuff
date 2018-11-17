@@ -9,67 +9,63 @@
 
 1. Go to the AWS Console
 
-2. Go to the CodePipeline console
+2. Go to the `CodePipeline` console
 
-3. Click `Create Pipeline`
+![](/images/mod06-000.png)
+
+3. Click `Create pipeline`
 
 4. Call your pipeline `workshop-` followed by your name, e.g. `workshop-yancui`
 
+6. Leave the other configurations as is
+
 ![](/images/mod06-001.png)
 
-5. Click `Next step`
+7. Click `Next`
 
-6. Choose `GitHub` as `Source provider`
+7. Choose `GitHub` as `Source provider`
 
-7. Click `Connect to GitHub`
+8. Click `Connect to GitHub`
 
-8. Authorize the app
+9. Authorize the app
 
-9. Select your repo, and branch
+10. Select your repo, and branch
 
 ![](/images/mod06-002.png)
 
-10. Click `Next step`
+11. Click `Next`
 
-11. Choose `AWS CodeBuild` as `Build provider`
+12. Choose `AWS CodeBuild` as `Build provider`
 
-12. Choose `Create a new build project` and call the build project `workshop-dev-` followed by your name, e.g. `workshop-dev-yancui`
+13. Click `Create project` and call the build project `workshop-dev-` followed by your name, e.g. `workshop-dev-yancui`
 
 ![](/images/mod06-003.png)
 
-13. Choose `Use an image managed by AWS CodeBuild` and choose `Ubuntu`, `Node.js` and `aws/codebuild/nodejs:8.11.0`
-
-14. Choose `Use the buildspec.yml in the source code root directory`
+14. Under `Environment image`, choose `Managed image` and choose `Ubuntu`, `Node.js` and `aws/codebuild/nodejs:8.11.0`, and `Always use the latest image for this runtime version`
 
 ![](/images/mod06-004.png)
 
-15. Leave the `Caching` and `VPC` configurations as they are
+15. Expand `Additional configuration`, under `Environment variables`, add the environment variables `STAGE` and `REGION`. We'll use them to control which stage and region our functions would be deployed to
 
-16. Under `Advanced`, `Environment variables`, add the environment variables `STAGE` and `REGION`. We'll use them to control which stage and region our functions would be deployed to.
+16. Leave other additional configurations as they are
 
 ![](/images/mod06-005.png)
 
-17. Cick `Save build project`
+17. Under `Buildspec`, choose `Use a buildspec file`
 
 ![](/images/mod06-006.png)
 
-18. Click `Next step`
+18. Cick `Continue to CodePipeline`
 
-19. Choose `No Deployment` for `Deployment provider`. We'll deploy from our build script
+19. Click `Next`
+
+20. Click `Skip`, we'll deploy during the build stage when we run our build script
+
+21. Click `Skip` to confirm
 
 ![](/images/mod06-007.png)
 
-20. Click `Next step`
-
-21. Click `Create role`
-
-22. In the new window, accept the default permissions and click `Allow`
-
-23. Click `Next step`
-
-24. Click `Create pipeline`
-
-![](/images/mod06-008.png)
+22. Review the configuration and click `Create pipeline`
 
 Congratulations! You have created your first pipeline!
 
