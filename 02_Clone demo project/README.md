@@ -3,7 +3,7 @@
 <details>
 <summary><b>Clone and deploy the demo project</b></summary><p>
 
-1. Fork this [repo](https://github.com/theburningmonk/production-ready-serverless-workshop-codemesh-demo)
+1. Fork this [repo](https://github.com/theburningmonk/production-ready-serverless-workshop-buildstuff-demo)
 
 and clone it on your laptop
 
