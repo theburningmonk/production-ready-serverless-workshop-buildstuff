@@ -1,2 +1,3 @@
 # production-ready-serverless-workshop-buildstuff
-Public workshop at CodeMesh
+
+Public workshop at BuildStuff
